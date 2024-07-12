@@ -1,0 +1,264 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-color: black;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    color: white;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #337ab7;
+    color: #fff;
+  }
+  
+  button:hover {
+    background-color: #23527c;
+  }
+  
+  /* Header Styles */
+  
+  .header {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .back-button {
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: 70px;
+  }
+  
+  /* Toggle Section Styles */
+  
+  .toggle-sections {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .toggle-sections button {
+    background-color: green;
+    color: #fff;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .toggle-sections button:hover {
+    background-color: black;
+  }
+  
+  /* Section Header Styles */
+  
+  .section-header {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Contest Box Styles */
+
+  .section-all-contests-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background-image: url(Back.jpg);
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: bottom; /* Ensures the image is aligned to the bottom */
+    padding: 20px; /* Add padding to the text */
+    color: white; /* Ensures the text is readable */
+    text-shadow: 1px 1px 2px black; /* Optional: Add shadow to text for better readability */
+    overflow: hidden;
+    height: 300px; /* Initial height */
+    transition: height 1s; /* Smooth transition for height change */
+    position: relative;
+  }
+  
+  .section-all-contests-active:hover {
+    height: 520px; /* New height on hover */
+}
+
+  .contest-box1 {
+    background-image: url(learn-to-code.jpg);
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Ensure the text is readable */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white; /* Optional: Add shadow to text for better readability */
+  }
+  
+  .contest-box2 {
+    background-image: url(free.png);
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white; /* Ensure the text is readable */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white; /* Optional: Add shadow to text for better readability */
+  }
+  
+  .contest-box1 p,.contest-box2 p {
+    margin-bottom: 10px;
+    color: #fff;
+    height: 30px;
+    width: 400px;
+  }
+  
+  .contest-box1 button,.contest-box2 button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #337ab7;
+    color: #fff;
+  }
+  
+  .contest-box1 button:hover,.contest-box2 button:hover {
+    background-color: #23527c;
+  }
+  
+  #teamSelectionModal {
+    color: black;
+    background-color: white;
+  }
+
+  #teamSelectionModal button {
+    background-color: darkgoldenrod;
+    padding: 10px;
+  }
+  .section-picked-teams {
+    color: black;
+    background-color: white;
+  }
+
+  .section-joined-contests {
+    color: black;
+    background-color: white;
+  }
+  .create-team {
+    padding: 20px;
+  }
+  .create-team button {
+    background-color: maroon;
+  }
+  .contest-box {
+    padding: 10px;
+  }
+  .contest-box button {
+    background-color: darkblue
+  }
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+  .back-button {
+      margin-bottom: 10px;
+    }
+  
+  .toggle-sections {
+      flex-direction: column;
+    }
+  
+  .toggle-sections button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+  .contest-box1,.contest-box2 {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+  .header {
+      padding: 10px 20px;
+    }
+  
+  .logo img {
+      width: 30px;
+      height: 30px;
+    }
+  
+  .toggle-sections {
+      padding: 10px 20px;
+    }
+  
+  .section-header {
+      font-size: 18px;
+    }
+  
+  .contest-box1,.contest-box2 {
+      padding: 15px;
+    }
+  
+  .contest-box1 p,.contest-box2 p {
+      font-size: 14px;
+    }
+  
+  .contest-box1 button,.contest-box2 button {
+      font-size: 14px;
+    }
+  }

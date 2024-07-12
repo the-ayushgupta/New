@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contest Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="/index.php" class="back-button">← Back</a>
+        <a href="#" class="logo">
+            <img src="logo.png" alt="">
+        </a>
+    </div>
+    <div class="toggle-sections">
+        <button onclick="toggleSection('all-contests')">All Contests</button>
+        <button onclick="toggleSection('picked-teams')"><a href=".section-picked-teams"></a>Picked Teams</button>
+        <button onclick="toggleSection('joined-contests')"><a href=".section-joined-contests"></a>Joined Contests</button>
+    </div>
+    <div class="section-header">All Contests</div>
+    <div class="section-all-contests-active">
+        <div class="contest-box1">
+            <p>Contest Code: ARGVSBRA1</p>
+            <p>Entry Fee: 22.00</p>
+            <p>Prize Pool: 12000.00</p>
+            <p>Total Spots: 1000</p>
+            <p>Filled Spots: 2</p>
+            <button onclick="showTeamSelectionModal('ARGVSBRA1', 22, false)">Join for 22.00</button>
+        </div>
+        <div class="contest-box2">
+            <p>Contest Code: ARGVSBRA2</p>
+            <p>Entry Fee: 22.00</p>
+            <p>Prize Pool: 12000.00</p>
+            <p>Total Spots: 1000</p>
+            <p>Filled Spots: 2</p>
+            <button onclick="showTeamSelectionModal('ARGVSBRA2', 0, true)">Join for Free</button>
+        </div>
+    </div>
+    <!-- Team Selection Modal -->
+    <div id="teamSelectionModal">
+        <div>
+            <h3>Select Your Team</h3>
+            <form id="teamSelectionForm" method="GET" action="joining_team.php">
+                <input type="hidden" name="contest_code" id="contestCode">
+                <input type="hidden" name="isFree" id="isFree">
+                <input type="hidden" name="match_code" id="matchCode">
+                <select name="userteam_code" id="userTeamCode">
+                    <option value="USERT1">USERT1</option>
+                    <option value="USERT2">USERT2</option>
+                </select>
+                <button type="submit">Join</button>
+                <button type="button">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <div class="section-picked-teams">
+        <div class="section-header">Picked Teams</div>
+        <div class="contest-box">
+            <p>User Team Code: USERT1</p>
+            <button>View Team</button>
+        </div>
+        <div class="contest-box">
+            <p>User Team Code: USERT2</p>
+            <button>View Team</button>
+        </div>
+        <div class="create-team">
+            <button>Create New Team</button>
+        </div>
+    </div>
+    <div class="section-joined-contests" id="joined-contests">
+        <div class="section-header">Joined Contests</div>
+        <div class="contest-box">
+            <p>Contest Code: ARGVSBRA1</p>
+            <p>Number of Entries: 1</p>
+            <button>View Team</button>
+        </div>
+        <div class="contest-box">
+            <p>Contest Code: ARGVSBRA2</p>
+            <p>Number of Entries: 1</p>
+            <button>View Team</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
